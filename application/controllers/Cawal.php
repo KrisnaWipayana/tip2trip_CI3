@@ -3,7 +3,17 @@
 	{
 		function tampilawal()
 		{
-			$this->load->view('');	
+			$this->load->view('index.php');	
+		}
+
+		function tampilcontact()
+		{
+			$this->load->view('');
+		}
+
+		function tampilabout()
+		{
+			$this->load->view('');
 		}	
 	}
 ?>

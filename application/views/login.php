@@ -1,3 +1,28 @@
+<script language="javascript">
+  function proseslogin()
+  {
+    var email=$('#email').val();
+    if (email=="")
+    {
+      alert ("Email masih kosong");
+      $('#email').focus();
+      return false; 
+    } 
+    
+    var password=$('#password').val();
+    if (password=="")
+    {
+      alert ("Password masih kosong");
+      $('#password').focus();
+      return false; 
+    }
+    
+    $('#formlogin').submit();
+      
+  }
+</script>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,8 +55,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">About</a>
+            <a class="nav-item nav-link" href="<?php echo base_url('Cawal/tampilawal'); ?>">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="">About</a>
             <a class="nav-item nav-link" href="#">Contact</a>
             <a class="nav-item nav-link" href="#">Login</a>
             <a class="nav-item nav-link active" href="#">Sign Up<span class="sr-only">(current)</span></a>
@@ -53,18 +78,36 @@
     <!-- container daftar00 -->
 
     <div class="container justify-content-center">
+      <form name="formlogin" id="formlogin" method="post" action="<?php echo base_url('Clogin/proseslogin'); ?>">
           <div class="col-6 daftar-panel">
             <div class="row">
                 <div class="col-lg">
                  <h3>Login</h3>
                 </div>
             </div>
+            <?php
+              $pesan=$this->session->flashdata('pesan');
+                if ($pesan=="")
+                {
+                echo "";  
+                }
+                  else
+                { 
+            ?>
+  
+                <div class="alert alert-success alert-dismissible">
+                <?php echo $pesan; ?>
+                </div>
+      
+                <?php
+                }
+                ?>
 
             <div class="row">
                 <div class="col-lg">
                   <p></p>
-                  <h5>Username</h5>
-                  <p><input type="text" id="Email" placeholder="Example@gmail.com" class="text-center w-100 r-40" ></p>
+                  <h5>Email</h5>
+                  <p><input type="text" id="email" name="email" placeholder="Example@gmail.com" class="text-center w-100 r-40" ></p>
                 </div>
             </div>
 
@@ -72,7 +115,7 @@
                 <div class="col-lg">
                   <p></p>
                   <h5>Password</h5>
-                  <p><input type="password" id="password" placeholder="*******" class="text-center w-100"></p>
+                  <p><input type="password" id="password" name="password" placeholder="*******" class="text-center w-100"></p>
                 </div>
             </div>
 
@@ -80,11 +123,13 @@
             <div class="row">
 
                 <p></p>
-                    <button type="button" class="btnLogin btn-dark btn-lg w-100">Login</button>
+                    <button class="btnLogin btn-dark btn-lg w-100" onclick="prosesLogin();">Login</button>
                 </div>
            
             </div>
           </div>
+          <!-- form end -->
+          </form>
       </div>
 
     <!-- end of container -->

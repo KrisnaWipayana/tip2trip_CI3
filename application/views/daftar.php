@@ -1,3 +1,27 @@
+<script language="javascript">
+  function simpandata()
+  {
+    var email=$('#email').val();
+    if (email=="")
+    {
+      alert ("Email masih kosong");
+      $('#email').focus();
+      return false; 
+    } 
+    
+    var password=$('#password').val();
+    if (password=="")
+    {
+      alert ("Password masih kosong");
+      $('#password').focus();
+      return false; 
+    }
+    
+    $('#formdaftar').submit();
+      
+  }
+</script>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -53,18 +77,39 @@
     <!-- container daftar00 -->
 
     <div class="container justify-content-center">
+      <form name="formdaftar" id="formdaftar" method="post" action="<?php echo base_url('Cdaftar/simpandata'); ?>">
           <div class="col-6 daftar-panel">
             <div class="row">
                 <div class="col-lg">
                  <h3>SIGN UP</h3>
                 </div>
+
+                <?php
+                  $pesan=$this->session->flashdata('pesan');
+                  if ($pesan=="")
+                  {
+                    echo "";  
+                  }
+                  else
+                  { 
+                  ?>
+  
+                  <div class="alert alert-success alert-dismissible">
+                  <?php echo $pesan; ?>
+                  </div>
+      
+                  <?php
+                  }
+                  ?>
+
             </div>
 
             <div class="row">
+              <input type="hidden" name="idUser" id="idUSer"/>
                 <div class="col-lg">
                   <p></p>
                   <h5>Email</h5>
-                  <p><input type="text" id="Email" placeholder="Example@gmail.com" class="text-center w-100 r-40" ></p>
+                  <p><input type="text" id="email" name="email" placeholder="Example@gmail.com" class="text-center w-100 r-40" ></p>
                 </div>
             </div>
 
@@ -72,7 +117,7 @@
                 <div class="col-lg">
                   <p></p>
                   <h5>Nama Lengkap</h5>
-                  <p><input type="text" id="namaLengkap" placeholder="Example Example" class="text-center w-100"></p>
+                  <p><input type="text" id="namaLengkap" name="namaLengkap" placeholder="Example Example" class="text-center w-100"></p>
                 </div>
             </div>
 
@@ -80,7 +125,7 @@
                 <div class="col-lg">
                   <p></p>
                   <h5>Password</h5>
-                  <p><input type="password" id="password" placeholder="*******" class="text-center w-100"></p>
+                  <p><input type="password" id="password" name="password" placeholder="*******" class="text-center w-100"></p>
                 </div>
             </div>
 
@@ -88,7 +133,7 @@
                 <div class="col-lg">
                   <p></p>
                   <h5>No. Phone</h5>
-                  <p><input type="number" id="noTelp" placeholder="082*****" class="text-center w-100"></p>
+                  <p><input type="number" id="noTelp" name="noTelp" placeholder="082*****" class="text-center w-100"></p>
                 </div>
             </div>
 
@@ -96,7 +141,7 @@
                 <div class="col-lg">
                   <p></p>
                   <h5>Tanggal Lahir</h5>
-                  <p><input type="date" id="tglLahir" placeholder="time" class="text-center w-100"></p>
+                  <p><input type="date" id="tanggalLahir" name="tanggalLahir" placeholder="time" class="text-center w-100"></p>
                 </div>
             </div>
 
@@ -107,12 +152,13 @@
                 </div>
                 <div class="col-lg">
                 <p></p>
-                    <button type="button" class="btnSignIN btn-primary btn-lg w-100">Sign UP</button>
+                    <button type="button" class="btnSignIN btn-primary btn-lg w-100" onclick="simpandata()">Sign Up</button>
                 </div>
             </div>
 
             
             </div>
+            </form>
           </div>
       </div>
 
