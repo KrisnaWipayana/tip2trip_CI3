@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
      <!-- my Css-->
-     <link href="detail.css" rel="stylesheet" >
+     <link href="assets/css/detail.css" rel="stylesheet" >
   </head>
   <body>
     
