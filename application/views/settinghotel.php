@@ -143,13 +143,19 @@
         </ul>
       </li><!-- End Forms Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Pemesanan</span><i class="bi bi-chevron-down ms-auto"></i>
+       <li class="nav-item">
+        <a class="nav-link " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Data</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="tables-general.html">
+              <i class="bi bi-circle"></i><span>Data Pemesanan</span>
+            </a>
+          </li>
+          <li>
             <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>Data Pemesanan Hotel</span>
+              <i class="bi bi-circle"></i><span>Data Kamar Hotel</span>
             </a>
           </li>
         </ul>
