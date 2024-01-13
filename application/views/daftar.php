@@ -48,16 +48,16 @@
 
     <nav class="navbar navbar-expand-lg navbar-light ">
       <div class="container">
-        <a class="navbar-brand" href="#">TRIP2TRIP</a>
+        <a class="navbar-brand" href="<?php echo base_url('Cawal/tampilawal'); ?>">TRIP2TRIP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="<?php echo base_url('Cawal/tampilawal'); ?>">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">About</a>
             <a class="nav-item nav-link" href="#">Contact</a>
-            <a class="nav-item nav-link" href="#">Login</a>
+            <a class="nav-item nav-link" href="<?php echo base_url('Clogin/formlogin'); ?>">Login</a>
             <a class="nav-item nav-link active" href="#">Sign Up<span class="sr-only">(current)</span></a>
           </div>
         </div>
@@ -144,22 +144,19 @@
                   <p><input type="date" id="tanggalLahir" name="tanggalLahir" placeholder="time" class="text-center w-100"></p>
                 </div>
             </div>
-
+            
             <div class="row">
                 <div class="col-lg">
                 <p></p>
-                    <button type="button" class="btnLogin btn-dark btn-lg w-100">Login</button>
+                    <!-- <button class="btnLogin btn-dark btn-lg w-100" href="<?php echo base_url('Clogin/formlogin'); ?>">Login</button> -->
+                    <button type="button" class="btnSignIN btn-primary btn-lg w-100" onclick="simpandata()">Sign Up</button>
                 </div>
                 <div class="col-lg">
                 <p></p>
-                    <button type="button" class="btnSignIN btn-primary btn-lg w-100" onclick="simpandata()">Sign Up</button>
+                    
                 </div>
             </div>
-
-            
-            </div>
             </form>
-          </div>
       </div>
 
     <!-- end of container -->

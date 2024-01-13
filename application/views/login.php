@@ -58,8 +58,8 @@
             <a class="nav-item nav-link" href="<?php echo base_url('Cawal/tampilawal'); ?>">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="">About</a>
             <a class="nav-item nav-link" href="#">Contact</a>
-            <a class="nav-item nav-link" href="#">Login</a>
-            <a class="nav-item nav-link active" href="#">Sign Up<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="">Login</a>
+            <a class="nav-item nav-link active" href="<?php echo base_url('Cdaftar/registacc'); ?>">Sign Up<span class="sr-only">(current)</span></a>
           </div>
         </div>
       </div>
