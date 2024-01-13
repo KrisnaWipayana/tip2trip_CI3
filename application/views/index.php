@@ -15,9 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
      <!-- my Css-->
-     <link type="text/css" href="<?php echo base_url('views/home.css'); ?>" rel="stylesheet" >
-  
 
+     <link href="assets/css/home.css" rel="stylesheet" >
+  
     <body>
     <!-- Navbar -->
 
