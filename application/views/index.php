@@ -16,7 +16,7 @@
 
      <!-- my Css-->
 
-     <link href="assets/css/home.css" rel="stylesheet" >
+     <link href="<?php echo base_url('assets/css/home.css'); ?>" rel="stylesheet" >
   
     <body>
     <!-- Navbar -->
@@ -165,7 +165,8 @@
       <div class="container justify content-center" >
         <div class="row high-light">
           <div class="col">
-          <button type="button" class="btnSelengkapnya btn-primary btn-lg btn-block">Selengkapnya Disini</button>
+          <!-- <button type="button" href="" class="btnSelengkapnya btn-primary btn-lg btn-block">Selengkapnya Disini</button> -->
+          <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>" class="btnSelengkapnya btn-primary btn-lg btn-block">Selengkapnya Disini</a>
           </div>
       </div>
     <!-- end off rekomendasi panel -->

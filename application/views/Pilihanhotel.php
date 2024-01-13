@@ -57,13 +57,15 @@
               <div class="row">
                   <div class="col-lg">
                     <div class="card-deck">
-                      <div class="card" href="#">
+                      <div class="card">
+                        <a href="<?php echo base_url('Cdetail/tampilDetail'); ?>">
                         <img class="card-img-top" src="img/box1.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">Hotel Contoh</h5>
                           <p class="card-text">Deskripsi Hotel.</ps>
                           <h6 class="hargaHotel">Rp.</h6>
                         </div>
+                        </a>
                       </div>
                       <div class="card" href="#">
                       <img class="card-img-top" src="img/box1.jpg" alt="Card image cap">
