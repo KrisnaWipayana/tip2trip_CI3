@@ -40,7 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
      <!-- my Css-->
-     <link href="assets/css/daftar.css" rel="stylesheet" >
+     <link href="<?php echo base_url('assets/css/daftar.css'); ?>" rel="stylesheet" >
   </head>
   
 

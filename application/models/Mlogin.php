@@ -39,7 +39,8 @@
 				
 				$this->session->set_userdata($session);
 				
-				redirect('Cawal/tampilawal');
+
+				redirect('Cawal/afterlogin');
 			}
 			else
 			{
