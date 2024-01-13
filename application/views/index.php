@@ -111,7 +111,7 @@
       <div class="container content-center" >
         <div class="col box-1">
           <div class="row">
-          <img src="img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <img src="assets/img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <h5>AYANA RESORT BALI</h5>
           <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
           </div>
@@ -120,7 +120,7 @@
       <div class="container content-center" >
         <div class="col box-2">
           <div class="row">
-          <img src="img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <img src="assets/img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <h5>AYANA RESORT BALI</h5>
           <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
           </div>
@@ -129,7 +129,7 @@
       <div class="container content-center" >
         <div class="col box-3">
           <div class="row">
-          <img src="img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <img src="assets/img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <h5>AYANA RESORT BALI</h5>
           <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
           </div>
@@ -138,7 +138,7 @@
       <div class="container content-center" >
         <div class="col box-4">
           <div class="row">
-          <img src="img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <img src="assets/img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <h5>AYANA RESORT BALI</h5>
           <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
           </div>
@@ -147,7 +147,7 @@
       <div class="container content-center" >
         <div class="col box-5">
           <div class="row">
-          <img src="img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <img src="assets/img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <h5>AYANA RESORT BALI</h5>
           <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
           </div>
@@ -156,7 +156,7 @@
       <div class="container content-center" >
         <div class="col box-6">
           <div class="row">
-          <img src="img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <img src="assets/img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <h5>AYANA RESORT BALI</h5>
           <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
           </div>
@@ -258,7 +258,7 @@
 
     <div class="card text-center footer">
       <div class="card-footer text-muted" style="margin">
-      <h4>footer belom lese ya</h4>
+      <h4>Design By TRIP2TRIP TEAm</h4>
       </div>
     </div>
     

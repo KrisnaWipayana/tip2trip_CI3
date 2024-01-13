@@ -30,7 +30,7 @@
 }
 
 .jumbotron {
-    background-image: url(img/bghome.jpeg);
+    background-image: url(../img/bghome.jpeg);
     background-size: cover;
     margin:center;
     width: 100%;

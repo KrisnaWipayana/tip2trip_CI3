@@ -58,7 +58,7 @@
                   <div class="col-lg">
                     <div class="card-deck">
                       <div class="card" href="#">
-                        <img class="card-img-top" src="img/box1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="assets/img/box1.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">Hotel Contoh</h5>
                           <p class="card-text">Deskripsi Hotel.</ps>
@@ -66,7 +66,7 @@
                         </div>
                       </div>
                       <div class="card" href="#">
-                      <img class="card-img-top" src="img/box1.jpg" alt="Card image cap">
+                      <img class="card-img-top" src="assets/img/box1.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">Hotel Contoh</h5>
                           <p class="card-text">Deskripsi Hotel.</ps>
@@ -74,7 +74,7 @@
                         </div>
                       </div>
                       <div class="card" href="#">
-                      <img class="card-img-top" src="img/box1.jpg" alt="Card image cap">
+                      <img class="card-img-top" src="assets/img/box1.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">Hotel Contoh</h5>
                           <p class="card-text">Deskripsi Hotel.</ps>
