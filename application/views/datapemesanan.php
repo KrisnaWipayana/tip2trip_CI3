@@ -69,21 +69,21 @@
           
         </li><!-- End Notification Nav -->
 
-          ><!-- End Messages Icon -->
+          <!-- End Messages Icon -->
           
         </li><!-- End Messages Nav -->
 
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">admin Hotel</span>
+            <!-- <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> -->
+            <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $this->session->userdata('email');?></span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
               <h6>Nama Hotel</h6>
-              <span>Tampilan Admin</span>
+              <span><?php echo $this->session->userdata('status');?></span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -91,7 +91,7 @@
 
            
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)" onclick="logout();">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -111,7 +111,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="<?php echo base_url('Cawal/afterlogin'); ?>">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -125,7 +125,7 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="<?php echo base_url('Cadminhotel/settingHotel'); ?>">
               <i class="bi bi-circle"></i><span>Setting Hotel Anda</span>
             </a>
           </li>
@@ -138,7 +138,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html" class="active">
+            <a href="<?php echo base_url('Cadminhotel/tampilPesanan'); ?>" class="active">
               <i class="bi bi-circle"></i><span>Data Pemesanan</span>
             </a>
           </li>
@@ -178,11 +178,11 @@
               <p>Klik menu Validasi untuk menampilakan bukti pembayaran dan klik tombol Confirm untuk konfirmasi booking hotel berhasil</a>.</p>
 
               <!-- Table with stripped rows -->
-              <table class="table datatable">
+              <table class="table table-striped table-hover">
                 <thead>
                   <tr>
-                    <th>
-                      <b>ID</b>Booking
+                    
+                    <th>ID Booking</th>
                     <th data-type="date" data-format="YYYY/DD/MM">Tanggal Check In</th>
                     <th data-type="date" data-format="YYYY/DD/MM">Tanggal Check Out</th>
                     <th>Nama Pemesan</th>
@@ -191,8 +191,33 @@
                   </tr>
                 </thead>
                 <tbody>
-                 
+                    <?php 
+                    if(empty($hasil))
+                      {
+                      echo "Data Kosong"; 
+                      }
+                      else
+                      {
+                        $no=1;
+                    foreach ($hasil as $row): 
+                      ?>
+                <tr>
+
+                    <td><?php echo $row->idTransaksi; ?></td>
+                    <td><?php echo $row->tanggalMasuk; ?></td>
+                    <td><?php echo $row->tanggalKeluar; ?></td>
+                    <td><?php echo $row->namaLengkap; ?></td>
+                    <td><?php echo $row->buktiPembayaran; ?></td>
+                    <td><?php echo $row->statusPesanan; ?></td>
+                
+                </tr>
+                  <?php 
+                  $no++; 
+                    endforeach;
+                  } 
+                  ?>
                 </tbody>
+
               </table>
               <!-- End Table with stripped rows -->
 
@@ -234,6 +259,14 @@
   <!-- Template Main JS File -->
   <script src="<?php echo base_url('assets/js/main.js'); ?>"></script>
 
+  <script language="javascript">
+    function logout(){
+      if (confirm("Apakah anda yakin untuk keluar?")) {
+        window.open("<?php echo base_url(); ?>Clogin/logout","_self");
+      }
+    }
+  </script>
 </body>
+        
 
 </html>

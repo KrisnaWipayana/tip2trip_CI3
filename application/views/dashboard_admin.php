@@ -91,7 +91,7 @@
 
            
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="<?php echo base_url('Clogin/logout'); ?>">
+              <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)" onclick="logout();">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -142,7 +142,7 @@
           <i class="bi bi-layout-text-window-reverse"></i><span>Pemesanan</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <a href="tables-data.html">
+            <a href="<?php echo base_url('Cadminhotel/tampilPesanan'); ?>">
               <i class="bi bi-circle"></i><span>Data Pemesanan Hotel</span>
             </a>
           </li>

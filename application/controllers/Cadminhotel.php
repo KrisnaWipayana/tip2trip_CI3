@@ -1,14 +1,25 @@
 <?php
 	class Cadminhotel extends CI_Controller
 	{
+		public function __construct() {
+        parent::__construct();
+        $this->load->model('Madminhotel');
+    }
+
 		function tampilPesanan()
 		{
-			$this->load->view('datapemesanan.php');
+			$data['hasil'] = $this->Madminhotel->get_data();
+			$this->load->view('datapemesanan.php', $data);
 		}
 
 		function settingHotel()
 		{
 			$this->load->view('settinghotel.php');
 		}
+
+		// function dataPesanan()
+		// {
+
+		// }
 	}
 ?>

@@ -55,8 +55,8 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
+      <a href="<?php echo base_url('Cawal/tampilawal'); ?>" class="logo d-flex align-items-center">
+        <!-- <img src="<?php echo base_url('assets/img/logo.png'); ?>" alt=""> -->
         <span class="d-none d-lg-block">Trip2Trip</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -80,21 +80,21 @@
           
         </li><!-- End Notification Nav -->
 
-          ><!-- End Messages Icon -->
+          <!-- End Messages Icon -->
           
         </li><!-- End Messages Nav -->
 
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">admin Hotel</span>
+            <!-- <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> -->
+            <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $this->session->userdata('email'); ?></span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
               <h6>Nama Hotel</h6>
-              <span>Tampilan Admin</span>
+              <span><?php echo $this->session->userdata('status'); ?></span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -102,7 +102,7 @@
 
            
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)" onclick="logout();">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -122,7 +122,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="<?php echo base_url('Cawal/afterlogin'); ?>">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -136,7 +136,7 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="<?php echo base_url('Cadminhotel/settingHotel'); ?>">
               <i class="bi bi-circle"></i><span>Setting Hotel Anda</span>
             </a>
           </li>
@@ -149,7 +149,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html">
+            <a href="<?php echo base_url('Cadminhotel/tampilPesanan'); ?>">
               <i class="bi bi-circle"></i><span>Data Pemesanan</span>
             </a>
           </li>
@@ -209,7 +209,7 @@
                             </div>
                             <div class="form-group">
                             <label class=" col-form-label">Kelas Hotel</label>
-                                <div class="col-sm-10">
+                                <!-- <div class="col-sm-10"> -->
                                     <select class="form-select" aria-label="Default select example">
                                     <option selected>Open this select menu</option>
                                     <option value="1">⭐</option>
@@ -218,7 +218,7 @@
                                     <option value="4">⭐⭐⭐⭐</option>
                                     <option value="5">⭐⭐⭐⭐⭐</option>
                                     </select>
-                                </div>
+                                <!-- </div> -->
                             </div>
                             <div class="form-group">
                                 <label for="deskripsi_hotel">Deskripsi Hotel Anda:</label>
@@ -228,9 +228,9 @@
                                 <label for="jumlah_kamar">Jumlah Kamar:</label>
                                 <input type="number" class="form-control" id="jumlah_kamar" name="jumlah_kamar">
                             </div>
-													 <div class="form-group">
+							<div class="form-group">
                             <label class=" col-form-label">Pilih Bank Pembayaran</label>
-                                <div class="col-sm-10">
+                                <!-- <div class="col-sm-10"> -->
                                     <select class="form-select" aria-label="Default select example">
                                     <option selected>-- Pilih Salah satu Bank Dibawah --</option>
                                     <option value="bni">BNI</option>
@@ -239,9 +239,9 @@
                                     <option value="bri">BRI</option>
                                     <option value="permata">Permata Bank</option>
                                     </select>
-                                </div>
+                                <!-- </div> -->
                             </div>
-														<div class="form-group">
+								<div class="form-group">
                                 <label for="norek">Rekening Pembayaran:</label>
                                 <input type="number" class="form-control" id="norek" name="norek">
                             </div>
@@ -324,6 +324,13 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script language="javascript">
+    function logout(){
+      if (confirm("Apakah anda yakin untuk keluar?")) {
+        window.open("<?php echo base_url(); ?>Clogin/logout","_self");
+      }
+    }
+  </script>
 
 <script>
     $(document).ready(function () {
