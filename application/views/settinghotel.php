@@ -211,9 +211,9 @@
       <h1>Form Hotel Anda</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">form tambah hotel</li>
-          <li class="breadcrumb-item active">Setting Hotel Anda</li>
+          <li class="breadcrumb-item">Setting Hotel Anda</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->

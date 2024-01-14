@@ -17,12 +17,41 @@
 
 		function registHotel(){
 			$data['konten']=$this->load->view('settinghotel','',TRUE);
-			$hasiltable['hasil']=$this->Mhotel->tampildata();
-			$data['table']=$this->load->view('pendaftaran_table',$hasiltable,TRUE);
+			$hasiltable['hasil']=$this->Mhotel->tampildataHotel();
+			// $data['table']=$this->load->view('pendaftaran_table',$hasiltable,TRUE);
 			$this->load->view('settinghotel',$data);	
 		}
 		
-		function simpandata() 
+		function simpandataHotel() 
+		{
+			$this->Mhotel->simpandataHotel();
+			redirect('Chotel/registHotel');	
+		}
+		
+		function hapusdataHotel($idHotel)
+		{
+			$this->Mhotel->hapusdataHotel($idHotel);
+			redirect('Chotel/registHotel');
+		}
+		 
+		function editdataHotel($idHotel)
+		{
+			$this->Mhotel->editdataHotel($idHotel);
+			// var_dump($idUSer);
+			// die();	 
+		}	
+
+
+
+
+		function registKamar(){
+			$data['konten']=$this->load->view('settinghotel','',TRUE);
+			$hasiltable['hasil']=$this->Mhotel->tampildataKamar();
+			// $data['table']=$this->load->view('pendaftaran_table',$hasiltable,TRUE);
+			$this->load->view('settinghotel',$data);	
+		}
+		
+		function simpandataKamar() 
 		{
 			$this->Mhotel->simpandata();
 			redirect('Chotel/registHotel');	
