@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
      <!-- my Css-->
-     <link href="assets/css/pilihhotel.css" rel="stylesheet" >
+     <link href='<?php echo base_url("assets/css/pilihhotel.css");?>' rel="stylesheet" >
   </head>
   <body>
     
