@@ -188,6 +188,7 @@
                     <th>Jumlah Kamar Tersedia</th>
                     <th>Foto Kamar</th>
                     <th>Harga Kamar</th>
+										<th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
