@@ -113,9 +113,9 @@
         <div class="col box-1">
           <div class="row">
           <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
-          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
-          <h5>AYANA RESORT BALI</h5>
-          <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
+          <img src="<?php echo base_url('assets/img/sanur.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <p> Sanur </p>
+          <p>Sanur Beach is one of the tourist beaches on the island of Bali. This beach is located just east of the city of Denpasar,Sanur beach cannot be used for surfing. </p>
           </a>
           </div>
       </div>
@@ -124,9 +124,9 @@
         <div class="col box-2">
           <div class="row">
           <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
-          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
-          <h5>AYANA RESORT BALI</h5>
-          <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
+          <img src="<?php echo base_url('assets/img/kuta3.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <p> Kuta </p>
+          <p>Kuta District is a sub-district in Badung Regency, Bali Province, Indonesia. Has tourist attractions in Indonesia that are well known to foreign countries, namely Kuta Beach, especially for surfing fans. </p>
           </a>
           </div>
       </div>
@@ -135,9 +135,9 @@
         <div class="col box-3">
           <div class="row">
         <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
-          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
-          <h5>AYANA RESORT BALI</h5>
-          <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
+          <img src="<?php echo base_url('assets/img/nusa penida.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <p>Nusa Penida </p>
+          <p>Nusa Penida is an island part of the country of the Republic of Indonesia located in southeastern Bali separated by the Badung Strait. Near this island there are also other small islands namely Nusa Lembongan. </p>
         </a>
           </div>
       </div>
@@ -146,9 +146,9 @@
         <div class="col box-4">
           <div class="row">
         <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
-          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
-          <h5>AYANA RESORT BALI</h5>
-          <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
+          <img src="<?php echo base_url('assets/img/ubud.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <p> Ubud </p>
+          <p>The city of Ubud, located in the central part of the island of Bali, Indonesia, is known as a center for traditional dance and crafts.</p>
         </a>
           </div>
       </div>
@@ -157,9 +157,9 @@
         <div class="col box-5">
           <div class="row">
         <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
-          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
-          <h5>AYANA RESORT BALI</h5>
-          <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
+          <img src="<?php echo base_url('assets/img/kintamani.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <p> Kintamani </p>
+          <p>Kintamani is a district in Bangli County, Bali Province, Indonesia. Kintamani is also a natural scenery tourist area in Bali, Indonesia. </p>
         </a>
           </div>
       </div>
@@ -168,9 +168,9 @@
         <div class="col box-6">
           <div class="row">
         <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
-          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
-          <h5>AYANA RESORT BALI</h5>
-          <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
+          <img src="<?php echo base_url('assets/img/gwk.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <p>GWK</p>
+          <p>Garuda Wisnu Kencana Cultural Park is the only tourist attraction in Bali that presents Balinese arts performances every hour, every day. </p>
         </a>
           </div>
       </div>
@@ -272,7 +272,7 @@
 
     <div class="card text-center footer">
       <div class="card-footer text-muted" style="margin">
-      <h4>Design By TRIP2TRIP TEAm</h4>
+      <h4>Design By TRIP2TRIP TEAM</h4>
       </div>
     </div>
     
