@@ -34,6 +34,7 @@
             <a class="nav-item nav-link" href="#">Contact</a>
             <a class="nav-item nav-link" href="<?php echo base_url('Clogin/formlogin'); ?>">Login</a>
             <a class="nav-item nav-link" href="<?php echo base_url('Cdaftar/registacc'); ?>">Sign Up</a>
+            <a class="nav-item nav-link" href="javascript:void(0)" onclick="logout();">Log Out</a>
           </div>
         </div>
       </div>
@@ -111,54 +112,66 @@
       <div class="container content-center" >
         <div class="col box-1">
           <div class="row">
-          <img src="assets/img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
+          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <h5>AYANA RESORT BALI</h5>
           <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
+          </a>
           </div>
       </div>
 
       <div class="container content-center" >
         <div class="col box-2">
           <div class="row">
-          <img src="assets/img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
+          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <h5>AYANA RESORT BALI</h5>
           <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
+          </a>
           </div>
       </div>
 
       <div class="container content-center" >
         <div class="col box-3">
           <div class="row">
-          <img src="assets/img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+        <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
+          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <h5>AYANA RESORT BALI</h5>
           <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
+        </a>
           </div>
       </div>
 
       <div class="container content-center" >
         <div class="col box-4">
           <div class="row">
-          <img src="assets/img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+        <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
+          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <h5>AYANA RESORT BALI</h5>
           <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
+        </a>
           </div>
       </div>
 
       <div class="container content-center" >
         <div class="col box-5">
           <div class="row">
-          <img src="assets/img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+        <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
+          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <h5>AYANA RESORT BALI</h5>
           <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
+        </a>
           </div>
       </div>
 
       <div class="container content-center" >
         <div class="col box-6">
           <div class="row">
-          <img src="assets/img/box1.jpg" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+        <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
+          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <h5>AYANA RESORT BALI</h5>
           <p>AYANA’s majestic sunsets and ocean-front views are complemented by a white-sand beach and shared facilities as Bali’s only integrated resort with RIMBA by AYANA Bali. </p>
+        </a>
           </div>
       </div>
 
@@ -271,5 +284,12 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script language="javascript">
+    function logout(){
+      if (confirm("Apakah anda yakin untuk keluar?")) {
+        window.open("<?php echo base_url(); ?>Clogin/logout","_self");
+      }
+    }
+  </script>
   </body>
 </html> 

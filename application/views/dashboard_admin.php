@@ -83,7 +83,7 @@
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
               <h6>Nama Hotel</h6>
-              <span>Tampilan Admin</span>
+              <span><?php echo $this->session->userdata('status'); ?></span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -314,6 +314,14 @@
 
   <!-- Template Main JS File -->
   <script src="<?php echo base_url('assets/js/main.js'); ?>"></script>
+
+  <script language="javascript">
+    function logout(){
+      if (confirm("Apakah anda yakin untuk keluar?")) {
+        window.open("<?php echo base_url(); ?>Clogin/logout","_self");
+      }
+    }
+  </script>
 
 </body>
 

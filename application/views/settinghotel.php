@@ -226,7 +226,24 @@
                             </div>
                             <div class="form-group">
                                 <label for="jumlah_kamar">Jumlah Kamar:</label>
-                                <input type="text" class="form-control" id="jumlah_kamar" name="jumlah_kamar">
+                                <input type="number" class="form-control" id="jumlah_kamar" name="jumlah_kamar">
+                            </div>
+													 <div class="form-group">
+                            <label class=" col-form-label">Pilih Bank Pembayaran</label>
+                                <div class="col-sm-10">
+                                    <select class="form-select" aria-label="Default select example">
+                                    <option selected>-- Pilih Salah satu Bank Dibawah --</option>
+                                    <option value="bni">BNI</option>
+                                    <option value="bca">BCA</option>
+                                    <option value="mandiri">Mandiri</option>
+                                    <option value="bri">BRI</option>
+                                    <option value="permata">Permata Bank</option>
+                                    </select>
+                                </div>
+                            </div>
+														<div class="form-group">
+                                <label for="norek">Rekening Pembayaran:</label>
+                                <input type="number" class="form-control" id="norek" name="norek">
                             </div>
                             <div class="form-group">
                                 <label for="fileUpload">Upload Foto Hotel:</label>

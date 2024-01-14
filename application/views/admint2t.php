@@ -69,21 +69,21 @@
           
         </li><!-- End Notification Nav -->
 
-          ><!-- End Messages Icon -->
+          <!-- End Messages Icon -->
           
         </li><!-- End Messages Nav -->
 
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
+            <!-- <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> -->
+            <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $this->session->userdata('email'); ?></span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Hi, Admin</h6>
-              <span>ADMIN TRIP2TRIP</span>
+              <h6><?php echo $this->session->userdata('namaLengkap'); ?></h6>
+              <span><?php echo $this->session->userdata('status'); ?></span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -91,7 +91,7 @@
 
            
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)" onclick="logout();">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -305,17 +305,25 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/chart.js/chart.umd.js"></script>
-  <script src="assets/vendor/echarts/echarts.min.js"></script>
-  <script src="assets/vendor/quill/quill.min.js"></script>
-  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="<?php echo base_url('assets/vendor/apexcharts/apexcharts.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/chart.js/chart.umd.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/echarts/echarts.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/quill/quill.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/simple-datatables/simple-datatables.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/tinymce/tinymce.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/php-email-form/validate.js'); ?>"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="<?php echo base_url('assets/js/main.js'); ?>"></script>
+
+  <script language="javascript">
+    function logout(){
+      if (confirm("Apakah anda yakin untuk keluar?")) {
+        window.open("<?php echo base_url(); ?>Clogin/logout","_self");
+      }
+    }
+  </script>
 
 </body>
 
