@@ -1,10 +1,10 @@
 <?php
-	class Cdaftar extends CI_Controller
+	class Chotel extends CI_Controller
 	{
 		public function __construct()
 		{
 			parent::__construct();
-			$this->load->model('Mdaftar'); 
+			$this->load->model('Mhotel');
 		}
 		
 		// function formdaftar()
@@ -15,28 +15,28 @@
 		// 	$this->load->view('resetpass',$data);	
 		// }
 
-		function registacc(){
-			$data['konten']=$this->load->view('daftar','',TRUE);
-			$hasiltable['hasil']=$this->Mdaftar->tampildata();
+		function registHotel(){
+			$data['konten']=$this->load->view('settinghotel','',TRUE);
+			$hasiltable['hasil']=$this->Mhotel->tampildata();
 			$data['table']=$this->load->view('pendaftaran_table',$hasiltable,TRUE);
-			$this->load->view('daftar',$data);	
+			$this->load->view('settinghotel',$data);	
 		}
 		
 		function simpandata() 
 		{
-			$this->Mdaftar->simpandata();
-			redirect('Cadmin/tampilAkun');	
+			$this->Mhotel->simpandata();
+			redirect('Chotel/registHotel');	
 		}
 		
 		function hapusdata($idUser)
 		{
-			$this->Mdaftar->hapusdata($idUser);
-			redirect('Cadmin/tampilAkun');
+			$this->Mhotel->hapusdata($idUser);
+			redirect('Chotel/registHotel');
 		}
 		 
 		function editdata($idUser)
 		{
-			$this->Mdaftar->editdata($idUser);
+			$this->Mhotel->editdata($idUser);
 			// var_dump($idUSer);
 			// die();	 
 		}	

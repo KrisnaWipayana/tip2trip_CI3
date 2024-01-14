@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
      <!-- my Css-->
-     <link href="assets/css/detail.css" rel="stylesheet" >
+     <link href="<?php echo base_url('assets/css/detail.css'); ?>" rel="stylesheet" >
   </head>
   <body>
     
@@ -30,10 +30,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">My Booking</a>
-                <a class="nav-item nav-link" href="#">Contact</a>
-                <a class="nav-item nav-link" href="#">Logout</a>
+                <a class="nav-item nav-link" href="<?php echo base_url('Cawal/tampilawal'); ?>">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="<?php echo base_url('Cbooking/tampilBooking'); ?>">My Booking</a>
+                <a class="nav-item nav-link" href="<?php echo base_url('Cawal/tampilawal'); ?>">Contact</a>
+                <a class="nav-item nav-link" href="javascript:void(0)" onclick="logout();">Logout</a>
             </div>
             </div>
         </div>
@@ -61,13 +61,13 @@
                       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                <img class="d-block w-100" src="assets/img/box1.jpg" alt="First slide">
+                                <img class="d-block w-100" src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="First slide">
                                 </div>
                                 <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/bghome.jpeg" alt="Second slide">
+                                <img class="d-block w-100" src="<?php echo base_url('assets/img/bghome.jpeg'); ?>" alt="Second slide">
                                 </div>
                                 <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/box1.jpg" alt="Third slide">
+                                <img class="d-block w-100" src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Third slide">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -84,10 +84,13 @@
                       <div class="card text-left">
                         <div class="card-body">
                           <h5 class="card-title">Nama Hotel</h5>
-                          <p class="card-text">Deskripsi Hotel apa aja yang penting panjang dah intinya minimal abnget 100 karakternya yak.</ps>
+                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                          consequat.</ps>
                           <p> _______________________________________________________________________</p>
                           <h5 class="card-tipe">Tipe Kamar</h5>
-                          <p class="tipeKamar">Tipe kamar vvip, Tipe Private, Tipe HoneyMoon</ps>
+                          <p class="tipeKamar">Tipe Kamar :</ps>
                           <p>_______________________________________________________________________</p>
                           <h5>Nama Pemesan</h5>
                           <p><input type="text" class="namaPemesan w-75 rounded" placeholder="Masukkan Nama Lengkap Anda"></p>
@@ -131,5 +134,12 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script language="javascript">
+    function logout(){
+      if (confirm("Apakah anda yakin untuk keluar?")) {
+        window.open("<?php echo base_url(); ?>Clogin/logout","_self");
+      }
+    }
+  </script>
   </body>
 </html>

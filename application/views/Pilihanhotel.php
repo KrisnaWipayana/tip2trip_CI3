@@ -32,9 +32,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link" href="<?php echo base_url('Cawal/tampilawal'); ?>">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">My Booking</a>
+                <a class="nav-item nav-link" href="<?php echo base_url('Cbooking/tampilBooking'); ?>">My Booking</a>
                 <a class="nav-item nav-link" href="#">Contact</a>
-                <a class="nav-item nav-link" href="#">Logout</a>
+                <a class="nav-item nav-link" href="javascript:void(0)" onclick="logout();">Logout</a>
             </div>
             </div>
         </div>
@@ -58,14 +58,9 @@
               <div class="row">
                   <div class="col-lg">
                     <div class="card-deck">
-<!-- <<<<<<< HEAD -->
                       <div class="card">
                         <a href="<?php echo base_url('Cdetail/tampilDetail'); ?>">
-                        <img class="card-img-top" src="assets/img/box1.jpg" alt="Card image cap">
-<!-- =======
-                      <div class="card" href="#">
-                        <img class="card-img-top" src="assets/img/box1.jpg" alt="Card image cap">
->>>>>>> 328049d875c265d13b1f90ab7d061782cd1dc567 -->
+                        <img class="card-img-top" src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">Hotel Contoh</h5>
                           <p class="card-text">Deskripsi Hotel.</ps>
@@ -73,21 +68,27 @@
                         </div>
                         </a>
                       </div>
+
                       <div class="card" href="#">
-                      <img class="card-img-top" src="assets/img/box1.jpg" alt="Card image cap">
+                      <a href="<?php echo base_url('Cdetail/tampilDetail'); ?>">
+                      <img class="card-img-top" src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">Hotel Contoh</h5>
                           <p class="card-text">Deskripsi Hotel.</ps>
                           <h6 class="hargaHotel">Rp.</h6>
                         </div>
+                      </a>
                       </div>
+
                       <div class="card" href="#">
-                      <img class="card-img-top" src="assets/img/box1.jpg" alt="Card image cap">
+                      <a href="<?php echo base_url('Cdetail/tampilDetail'); ?>">
+                      <img class="card-img-top" src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">Hotel Contoh</h5>
                           <p class="card-text">Deskripsi Hotel.</ps>
                           <h6 class="hargaHotel">Rp.</h6>
                         </div>
+                      </a>
                       </div>
                     </div>
                   </div>
@@ -104,5 +105,12 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script language="javascript">
+    function logout(){
+      if (confirm("Apakah anda yakin untuk keluar?")) {
+        window.open("<?php echo base_url(); ?>Clogin/logout","_self");
+      }
+    }
+  </script>
   </body>
 </html>

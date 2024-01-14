@@ -12,14 +12,15 @@
 			$this->load->view('datapemesanan.php', $data);
 		}
 
-		function settingHotel()
-		{
-			$this->load->view('settinghotel.php');
-		}
-
-		// function dataPesanan()
+		// function settingHotel()
 		// {
-
+		// 	$this->load->view('settinghotel.php');
 		// }
+		function verifikasi($idTransaksi)
+		{
+			$this->Madminhotel->verifikasi($idTransaksi);
+			redirect('Cadminhotel/tampilPesanan');
+		}
+		
 	}
 ?>

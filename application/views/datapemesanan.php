@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script language="javascript">
+  function verifikasi(idTransaksi)
+  {
+    if(confirm("Apakah yakin untuk verifikasi pembayaran ini?"))
+    {
+      //alert (KodeDaftar);
+      window.open("<?php echo base_url(); ?>Cadminhotel/verifikasi/"+idTransaksi,"_self");  
+    }
+  }
+</script>
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -208,7 +219,9 @@
                     <td><?php echo $row->tanggalKeluar; ?></td>
                     <td><?php echo $row->namaLengkap; ?></td>
                     <td><?php echo $row->buktiPembayaran; ?></td>
-                    <td><?php echo $row->statusPesanan; ?></td>
+                    <td>
+                      <button type="button" class="btn btn-primary btn-sm" onclick="verifikasi('<?php echo $row->idTransaksi; ?>');"><?php echo $row->statusPesanan; ?></button>
+                    </td>
                 
                 </tr>
                   <?php 

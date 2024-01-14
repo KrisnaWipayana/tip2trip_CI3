@@ -20,5 +20,11 @@ class Madminhotel extends CI_Model {
             }
             return $hasil;
     }
+    function verifikasi($idTransaksi)
+        {
+            $sql = "UPDATE `tb_transaksi` SET `statusPesanan` = 'Sudah diverifikasi' WHERE `tb_transaksi`.`idTransaksi` = '".$idTransaksi."'";  
+            // ------delete from tb_transaksi where idTransaksi='".$idTransaksi."'";
+            $this->db->query($sql);
+        }
 }
 ?>

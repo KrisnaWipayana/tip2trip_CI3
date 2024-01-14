@@ -1,6 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script language="javascript">
+  function hapusdata(idHotel)
+  {
+    if(confirm("Apakah yakin menghapus data ini?"))
+    {
+      //alert (KodeDaftar);
+      window.open("<?php echo base_url(); ?>Chotel/hapusdata/"+idHotel,"_self");  
+    }
+  }
+  
+  function editdata(idHotel)
+  {
+    //alert(KodeDaftar);
+    load("Chotel/editdata/"+idHotel,"#script"); 
+  }
+
+  function simpandata()
+  {
+    // var NamaLengkap=$('#NamaLengkap').val();
+    // if (NamaLengkap=="")
+    // {
+    //   alert ("Nama lengkap masih kosong");
+    //   $('#NamaLengkap').focus();
+    //   return false; 
+    // } 
+    
+    // var Alamat=$('#Alamat').val();
+    // if (Alamat=="")
+    // {
+    //   alert ("Alamat masih kosong");
+    //   $('#Alamat').focus();
+    //   return false; 
+    // }
+    
+    $('#formdaftar').submit();  
+  }
+  
+</script>
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -191,24 +230,21 @@
         <div class="container mt-5">
             <div class="card">
                 <div class="card-body">
-                    <form id="wizardForm" action="process.php" method="post"  enctype="multipart/form-data">
+                    <form id="formHotel" action="process.php" method="post"  enctype="multipart/form-data">
                         <!-- Step 1 -->
                         <div class="wizard-content active-step" id="step-1">
                             <h3>Form Hotel</h3>
                             <div class="form-group">
+                                <input type="hidden" name="idHotel">
                                 <label for="nama_hotel">Nama Hotel:</label>
                                 <input type="text" class="form-control" id="nama_hotel" name="nama_hotel">
                             </div>
                             <div class="form-group">
-                                <label for="kota">Kota :</label>
-                                <input type="text" class="form-control" id="kota" name="kota">
+                                <label for="lokasiHotel">lokasiHotel :</label>
+                                <input type="text" class="form-control" id="lokasiHotel" name="lokasiHotel">
                             </div>
                             <div class="form-group">
-                                <label for="alamat">alamat :</label>
-                                <input type="text" class="form-control" id="alamat_hotel" name="alamat_hotel">
-                            </div>
-                            <div class="form-group">
-                            <label class=" col-form-label">Kelas Hotel</label>
+                            <label class=" col-form-label">Rating Hotel</label>
                                 <!-- <div class="col-sm-10"> -->
                                     <select class="form-select" aria-label="Default select example">
                                     <option selected>Open this select menu</option>
@@ -221,38 +257,23 @@
                                 <!-- </div> -->
                             </div>
                             <div class="form-group">
-                                <label for="deskripsi_hotel">Deskripsi Hotel Anda:</label>
-                                <input type="text" class="form-control" id="deskripsi_hotel" name="deskripsi_hotel" style="height: 100px">
+                                <label for="statusHotel">statusHotel :</label>
+                                <input type="text" class="form-control" id="statusHotel" name="statusHotel">
                             </div>
                             <div class="form-group">
-                                <label for="jumlah_kamar">Jumlah Kamar:</label>
-                                <input type="number" class="form-control" id="jumlah_kamar" name="jumlah_kamar">
-                            </div>
-							<div class="form-group">
-                            <label class=" col-form-label">Pilih Bank Pembayaran</label>
-                                <!-- <div class="col-sm-10"> -->
-                                    <select class="form-select" aria-label="Default select example">
-                                    <option selected>-- Pilih Salah satu Bank Dibawah --</option>
-                                    <option value="bni">BNI</option>
-                                    <option value="bca">BCA</option>
-                                    <option value="mandiri">Mandiri</option>
-                                    <option value="bri">BRI</option>
-                                    <option value="permata">Permata Bank</option>
-                                    </select>
-                                <!-- </div> -->
-                            </div>
-								<div class="form-group">
-                                <label for="norek">Rekening Pembayaran:</label>
-                                <input type="number" class="form-control" id="norek" name="norek">
+                                <label for="deskripsi_hotel">Deskripsi Hotel Anda:</label>
+                                <input type="text" class="form-control" id="deskripsi_hotel" name="deskripsi_hotel" style="height: 100px">
                             </div>
                             <div class="form-group">
                                 <label for="fileUpload">Upload Foto Hotel:</label>
                                 <input type="file" class="form-control-file" id="fileUpload" name="fileUpload[]" multiple>
                             </div>
-                            <button type="button" class="btn btn-primary next-step">Next</button>
+                            <button type="submit" class="btn btn-primary next-step">Next</button>
+                            </form>
                         </div>
 
                         <!-- Step 2 -->
+                        <form id="formKamar" action="" method="post" >
                         <div class="wizard-content" id="step-2">
                             <h3>Form Kamar Hotel</h3>
                             <div class="form-group">

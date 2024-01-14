@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
      <!-- my Css-->
-     <link href="pilihhotel.css" rel="stylesheet" >
+     <link href="<?php echo base_url('assets/css/pilihhotel.css'); ?>" rel="stylesheet" >
   </head>
   <body>
     
@@ -30,10 +30,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">My Booking</a>
+                <a class="nav-item nav-link" href="<?php echo base_url('Cawal/tampilawal'); ?>">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="<?php echo base_url('Cbooking/tampilBooking'); ?>">My Booking</a>
                 <a class="nav-item nav-link" href="#">Contact</a>
-                <a class="nav-item nav-link" href="#">Logout</a>
+                <a class="nav-item nav-link" href="javascript:void(0)" onclick="logout();">Logout</a>
             </div>
             </div>
         </div>
@@ -52,14 +52,13 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Tipe Kamar</h5>
-          <p>Edit Tipe kamar mulai dari harga dan foto dari sini</a>.</p>
+          <p>Riwayat pemesanan.</p>
 
           <!-- Table with stripped rows -->
           <table class="table datatable">
             <thead>
-              <tr>
-                <th>
-                  <b>Kode</b>Booking
+              <tr>                
+                <th>Kode Booking</th>
                 <th>Tanggal Check In</th>
                 <th>Tanggal Check Out</th>
                 <th>Nama Hotel</th>
@@ -90,5 +89,12 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script language="javascript">
+    function logout(){
+      if (confirm("Apakah anda yakin untuk keluar?")) {
+        window.open("<?php echo base_url(); ?>Clogin/logout","_self");
+      }
+    }
+  </script>
   </body>
 </html>

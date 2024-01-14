@@ -10,8 +10,8 @@
   
   function editdata(idUser)
   {
-    alert(idUser);
-    // load("Cdaftar/editdata/"+idUser,"#script"); 
+    //alert(KodeDaftar);
+    load("Cdaftar/editdata/"+idUser,"#script"); 
   }
 
   function simpandata()
@@ -76,6 +76,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -211,24 +212,39 @@
     <form class="row g-3" name="formdaftar" id="formdaftar" method="post" action="<?php echo base_url('Cdaftar/simpandata'); ?>">
                 <div class="col-md-12">
                   <input type="hidden" name="idUser" id="idUser"/>
+                  <label for="namaLengkap">Nama Lengkap:</label>
                   <input type="text" name="namaLengkap" id="namaLengkap" class="form-control" placeholder="Nama Lengkap" >
                 </div>
                 <div class="col-md-6">
+                  <label for="email">Email:</label>
                   <input type="email"  name="email" id="email" class="form-control" placeholder="Email">
                 </div>
                 <div class="col-md-6">
+                  <label for="password">Password:</label>
                   <input type="password" name="password" id="password" class="form-control" placeholder="Password">
                 </div>
                 <div class="col-12">
+                  <label for="noTelp">Nomor Telepon:</label>
                   <input type="number" name="noTelp" id="noTelp" class="form-control" placeholder="Nomor Handphone">
                 </div>
                 <div class="col-md-6">
-                  <label for="norek">Tanggal Lahir:</label>
+                  <label for="status">Status:</label>
+                  <!-- <input type="text" name="status" id="status" class="form-control" placeholder="Status akun"> -->
+                   <select class="form-select" id="status" name="status" aria-label="Default select example">
+                      <option selected>Pilih status user</option>
+                      <option value="Member">Member</option>
+                      <option value="Admin">Admin</option>
+                      <option value="Pihak Hotel">Pihak Hotel</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="tanggalLahir">Tanggal Lahir:</label>
                   <input type="date" name="tanggalLahir" id="tanggalLahir" class="form-control" placeholder="">
                 </div>
                 
+                
                   <div class="col-md-12" style="height:100px">
-                  <button type="button" class="btn btn-primary" onclick="simpandata()">Submit</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
                   <!-- <button type="reset" class="btn btn-secondary">Reset</button> -->
                 </div>
               </form><!-- End No Labels Form -->
@@ -263,18 +279,18 @@
                       else
                       {
                         $no=1;
-                    foreach ($hasil as $row): 
+                    foreach ($hasil as $data): 
                       ?>
                 <tr>
 
-                    <td><?php echo $row->namaLengkap; ?></td>
-                    <td><?php echo $row->email; ?></td>
-                    <td><?php echo $row->status; ?></td>
-                    <td><?php echo $row->noTelp; ?></td>
-                    <td><?php echo $row->tanggalLahir; ?></td>
+                    <td><?php echo $data->namaLengkap; ?></td>
+                    <td><?php echo $data->email; ?></td>
+                    <td><?php echo $data->status; ?></td>
+                    <td><?php echo $data->noTelp; ?></td>
+                    <td><?php echo $data->tanggalLahir; ?></td>
                     <td>
-                    <button type="button" class="btn btn-primary btn-sm" onclick="editdata('<?php echo $row->idUser; ?>');">Edit</button>
-                    <button type="button" class="btn btn-danger btn-sm" onclick="hapusdata('<?php echo $row->idUser; ?>');">Hapus</button>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="editdata('<?php echo $data->idUser; ?>');">Edit</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="hapusdata('<?php echo $data->idUser; ?>');">Hapus</button>
                     </td>               
                 </tr>
                   <?php 
