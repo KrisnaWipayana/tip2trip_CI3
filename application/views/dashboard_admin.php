@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>Dashboard Pihak Hotel</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -44,7 +44,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="<?php echo base_url('Cawal/tampilawal'); ?>" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">Trip2Trip</span>
       </a>
@@ -69,15 +69,15 @@
           
         </li><!-- End Notification Nav -->
 
-          ><!-- End Messages Icon -->
+          <!-- End Messages Icon -->
           
         </li><!-- End Messages Nav -->
 
         <li class="nav-item dropdown pe-3">
 
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">admin Hotel</span>
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="" data-bs-toggle="dropdown">
+            <!-- <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> -->
+            <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $this->session->userdata('email'); ?></span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -91,7 +91,7 @@
 
            
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="<?php echo base_url('Clogin/logout'); ?>">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -111,7 +111,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link collapsed" href="<?php echo base_url('Cawal/afterlogin'); ?>">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -120,17 +120,17 @@
       
 
        <li class="nav-item">
-        <a class="nav-link " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-layout-text-window-reverse"></i><span>Data</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+        <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html">
+            <a href="<?php echo base_url('Cadminhotel/tampilPesanan'); ?>">
               <i class="bi bi-circle"></i><span>Data Pemesanan</span>
             </a>
           </li>
           <li>
-            <a href="tables-data.html">
+            <a href="<?php echo base_url('Cadminhotel/settingHotel'); ?>">
               <i class="bi bi-circle"></i><span>Data Kamar Hotel</span>
             </a>
           </li>
@@ -303,17 +303,17 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/chart.js/chart.umd.js"></script>
-  <script src="assets/vendor/echarts/echarts.min.js"></script>
-  <script src="assets/vendor/quill/quill.min.js"></script>
-  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="<?php echo base_url('assets/vendor/apexcharts/apexcharts.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/chart.js/chart.umd.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/echarts/echarts.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/quill/quill.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/simple-datatables/simple-datatables.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/tinymce/tinymce.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/php-email-form/validate.js'); ?>"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="<?php echo base_url('assets/js/main.js'); ?>"></script>
 
 </body>
 
