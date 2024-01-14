@@ -17,26 +17,27 @@
 
 		function registacc(){
 			$data['konten']=$this->load->view('daftar','',TRUE);
-			// $hasiltable['hasil']=$this->Mdaftar->tampildata();
-			// $data['table']=$this->load->view('pendaftaran_table',$hasiltable,TRUE);
+			$hasiltable['hasil']=$this->Mdaftar->tampildata();
+			$data['table']=$this->load->view('pendaftaran_table',$hasiltable,TRUE);
 			$this->load->view('daftar',$data);	
 		}
 		
 		function simpandata()
 		{
 			$this->Mdaftar->simpandata();
-			redirect('Cdaftar/registacc');	
+			redirect('Cadmin/tampilAkun');	
 		}
 		
 		function hapusdata($idUser)
 		{
 			$this->Mdaftar->hapusdata($idUser);
-			redirect('Cdaftar/registacc');
+			redirect('Cadmin/tampilAkun');
 		}
 		 
-		// function editdata($idUser)
-		// {
-		// 	$this->Mdaftar->editdata($idUser);	
-		// }	
+		function editdata($idUser)
+		{
+			$this->Mdaftar->editdata($idUser);
+			redirect('Cadmin/tampilAkun');	
+		}	
 	}
 ?>

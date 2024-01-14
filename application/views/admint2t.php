@@ -120,12 +120,12 @@
       
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="<?php echo base_url('Cawal/afterlogin'); ?>">
           <i class="bi bi-journal-text"></i><span>Form Akun</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="<?php echo base_url('Cadmin/tampilAkun'); ?>">
               <i class="bi bi-circle"></i><span>Setting Akun Customer</span>
             </a>
           </li>

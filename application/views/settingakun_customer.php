@@ -1,3 +1,43 @@
+<script language="javascript">
+  function hapusdata(idUser)
+  {
+    if(confirm("Apakah yakin menghapus data ini?"))
+    {
+      //alert (KodeDaftar);
+      window.open("<?php echo base_url(); ?>Cdaftar/hapusdata/"+idUser,"_self");  
+    }
+  }
+  
+  function editdata(idUser)
+  {
+    alert(idUser);
+    // load("Cdaftar/editdata/"+idUser,"#script"); 
+  }
+
+  function simpandata()
+  {
+    // var NamaLengkap=$('#NamaLengkap').val();
+    // if (NamaLengkap=="")
+    // {
+    //   alert ("Nama lengkap masih kosong");
+    //   $('#NamaLengkap').focus();
+    //   return false; 
+    // } 
+    
+    // var Alamat=$('#Alamat').val();
+    // if (Alamat=="")
+    // {
+    //   alert ("Alamat masih kosong");
+    //   $('#Alamat').focus();
+    //   return false; 
+    // }
+    
+    $('#formdaftar').submit();  
+  }
+  
+</script>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,29 +45,29 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>Setting Akun</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?php echo base_url('assets/img/favicon.png'); ?>" rel="icon">
+  <link href="<?php echo base_url('assets/img/apple-touch-icon.png'); ?>" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/bootstrap-icons/bootstrap-icons.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/boxicons/css/boxicons.min.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/quill/quill.snow.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/quill/quill.bubble.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/remixicon/remixicon.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/simple-datatables/style.css'); ?>" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NiceAdmin
@@ -44,7 +84,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="<?php echo base_url('Cawal/afterlogin'); ?>" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">Trip2Trip</span>
       </a>
@@ -69,20 +109,20 @@
           
         </li><!-- End Notification Nav -->
 
-          ><!-- End Messages Icon -->
+          <!-- End Messages Icon -->
           
         </li><!-- End Messages Nav -->
 
         <li class="nav-item dropdown pe-3">
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">admin Trip2Trip</span>
+            <!-- <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> -->
+            <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $this->session->userdata('email'); ?></span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Hi, Admin</h6>
-              <span>ADMIN TRIP2TRIP</span>
+              <h6><?php echo $this->session->userdata('namaLengkap'); ?></h6>
+              <span><?php echo $this->session->userdata('status'); ?></span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -90,7 +130,7 @@
 
           
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)" onclick="logout();">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -109,7 +149,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="<?php echo base_url('Cawal/afterlogin'); ?>">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -168,26 +208,28 @@
     </div><!-- End Page Title -->
 
     <!-- No Labels Form -->
-    <form class="row g-3">
+    <form class="row g-3" name="formdaftar" id="formdaftar" method="post" action="<?php echo base_url('Cdaftar/simpandata'); ?>">
                 <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="Nama Lengkap">
+                  <input type="hidden" name="idUser" id="idUser"/>
+                  <input type="text" name="namaLengkap" id="namaLengkap" class="form-control" placeholder="Nama Lengkap" >
                 </div>
                 <div class="col-md-6">
-                  <input type="email" class="form-control" placeholder="Email">
+                  <input type="email"  name="email" id="email" class="form-control" placeholder="Email">
                 </div>
                 <div class="col-md-6">
-                  <input type="password" class="form-control" placeholder="Password">
+                  <input type="password" name="password" id="password" class="form-control" placeholder="Password">
                 </div>
                 <div class="col-12">
-                  <input type="number" class="form-control" placeholder="Nomor Handphone">
+                  <input type="number" name="noTelp" id="noTelp" class="form-control" placeholder="Nomor Handphone">
                 </div>
                 <div class="col-md-6">
                   <label for="norek">Tanggal Lahir:</label>
-                  <input type="date" class="form-control" placeholder="">
+                  <input type="date" name="tanggalLahir" id="tanggalLahir" class="form-control" placeholder="">
                 </div>
-                  <div class="text-center" style="height:100px">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                  <button type="reset" class="btn btn-secondary">Reset</button>
+                
+                  <div class="col-md-12" style="height:100px">
+                  <button type="button" class="btn btn-primary" onclick="simpandata()">Submit</button>
+                  <!-- <button type="reset" class="btn btn-secondary">Reset</button> -->
                 </div>
               </form><!-- End No Labels Form -->
 
@@ -197,25 +239,49 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">AKun Customer</h5>
-              <p>Edit Akun CUstomer dari sini</a>.</p>
+              <h5 class="card-title">Akun Customer</h5>
+              <p>Edit Akun Customer</a>.</p>
 
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th>
-                      <b>ID</b>Akun
-                    <th>Nama </th>
+                    <th>Nama</th>
                     <th>Email</th>
-                    <th>password</th>
+                    <th>status</th>
                     <th>Nomor Handphone</th>
                     <th>Tanggal Lahir</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
-                 
+                 <?php 
+                    if(empty($hasil))
+                      {
+                      echo "Data Kosong"; 
+                      }
+                      else
+                      {
+                        $no=1;
+                    foreach ($hasil as $row): 
+                      ?>
+                <tr>
+
+                    <td><?php echo $row->namaLengkap; ?></td>
+                    <td><?php echo $row->email; ?></td>
+                    <td><?php echo $row->status; ?></td>
+                    <td><?php echo $row->noTelp; ?></td>
+                    <td><?php echo $row->tanggalLahir; ?></td>
+                    <td>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="editdata('<?php echo $row->idUser; ?>');">Edit</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="hapusdata('<?php echo $row->idUser; ?>');">Hapus</button>
+                    </td>               
+                </tr>
+                  <?php 
+                  $no++; 
+                    endforeach;
+                  } 
+                  ?>
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
@@ -246,18 +312,24 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/chart.js/chart.umd.js"></script>
-  <script src="assets/vendor/echarts/echarts.min.js"></script>
-  <script src="assets/vendor/quill/quill.min.js"></script>
-  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="<?php echo base_url('assets/vendor/apexcharts/apexcharts.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/chart.js/chart.umd.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/echarts/echarts.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/quill/quill.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/simple-datatables/simple-datatables.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/tinymce/tinymce.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/php-email-form/validate.js'); ?>"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="<?php echo base_url('assets/js/main.js'); ?>"></script>
+  <script language="javascript">
+    function logout(){
+      if (confirm("Apakah anda yakin untuk keluar?")) {
+        window.open("<?php echo base_url(); ?>Clogin/logout","_self");
+      }
+    }
+  </script>
 </body>
 
 </html>

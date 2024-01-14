@@ -61,31 +61,23 @@
 		{
 			$sql="delete from tb_user where idUser='".$idUser."'";
 			$this->db->query($sql);
-				
 		}
 		
-		// function editdata($idUser)
-		// {
-		// 	$sql="select * from tb_user where idUser='".$idUser."'";
-		// 	$query=$this->db->query($sql);
-		// 	if ($query->num_rows()>0)
-		// 	{
-		// 		$data=$query->row(); 
-		// 		echo "<script>$('#idUser').val('".$data->idUser."');</script>";
-		// 		echo "<script>$('#noTelp').val('".$data->noTelp."');</script>";
-		// 		echo "<script>$('#nama').val('".$data->nama."');</script>";	
-		// 		echo "<script>$('#tanggal_lahir').val('".$data->tanggal_lahir."');</script>";
-		// 		echo "<script>$('#jenis_kelamin').val('".$data->jenis_kelamin."');</script>";
-		// 		echo "<script>$('#jabatan').val('".$data->jabatan."');</script>";
-		// 		echo "<script>$('#unit_kerja').val('".$data->unit_kerja."');</script>";
-		// 		echo "<script>$('#email').val('".$data->email."');</script>";
-		// 		echo "<script>$('#status').val('".$data->status."');</script>";
-		// 	}
-				
-		
-		// }	
-		
-		
-		
+		function editdata($idUser)
+		{
+			$sql="select * from tb_user where idUser='".$idUser."'";
+			$query=$this->db->query($sql);
+			if ($query->num_rows()>0)
+			{
+				$data=$query->row(); 
+				echo "<script>$('#idUser').val('".$data->idUser."');</script>";
+				echo "<script>$('#namaLengkap').val('".$data->namaLengkap."');</script>";	
+				echo "<script>$('#email').val('".$data->email."');</script>";
+				echo "<script>$('#password').val('".$data->password."');</script>";
+				echo "<script>$('#noTelp').val('".$data->noTelp."');</script>";
+				echo "<script>$('#tanggalLahir').val('".$data->tanggalLahir."');</script>";
+				echo "<script>$('#status').val('".$data->status."');</script>";
+			}			
+		}							
 	}
 ?>

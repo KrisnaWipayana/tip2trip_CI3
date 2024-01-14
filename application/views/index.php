@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link active" href="<?php echo base_url('Cawal/tampilawal'); ?>">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">About</a>
+            <a class="nav-item nav-link" href="#about">About</a>
             <a class="nav-item nav-link" href="#">Contact</a>
             <a class="nav-item nav-link" href="<?php echo base_url('Clogin/formlogin'); ?>">Login</a>
             <a class="nav-item nav-link" href="<?php echo base_url('Cdaftar/registacc'); ?>">Sign Up</a>
@@ -231,7 +231,7 @@
     <!-- Panel Why choose us -->
 
         <div class="container justify content-center" >
-            <div class="row wcu">
+            <div class="row wcu" id="about">
               <div class="col">
                 <h6>Kenapa memilih Kami sebagai</h6>
                 <h6>partner perjalanan anda ?</h6>
@@ -272,7 +272,7 @@
 
     <div class="card text-center footer">
       <div class="card-footer text-muted" style="margin">
-      <h4>Design By TRIP2TRIP TEAm</h4>
+      <h4>Design By TRIP2TRIP TEAM</h4>
       </div>
     </div>
     
