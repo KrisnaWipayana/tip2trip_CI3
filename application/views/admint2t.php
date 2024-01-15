@@ -111,7 +111,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="<?php echo base_url('Cawal/afterlogin'); ?>">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -119,33 +119,18 @@
 
       
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="<?php echo base_url('Cawal/afterlogin'); ?>">
-          <i class="bi bi-journal-text"></i><span>Form Akun</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="<?php echo base_url('Cadmin/tampilAkun'); ?>">
-              <i class="bi bi-circle"></i><span>Setting Akun Customer</span>
-            </a>
-          </li>
-        </ul>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="forms-elements.html">
-              <i class="bi bi-circle"></i><span>Setting Akun Hotel</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Forms Nav -->
+      <!-- End Forms Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-layout-text-window-reverse"></i><span>Master Data</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>Data Semua Hotel</span>
+            
+          </li>
+          <li>
+            <a href="<?php echo base_url('Cadmin/tampilAkun'); ?>">
+              <i class="bi bi-circle"></i><span>Akun Customer</span>
             </a>
           </li>
         </ul>

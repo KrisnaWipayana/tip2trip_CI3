@@ -1,33 +1,71 @@
 <!DOCTYPE html>
+<script language="javascript">
+  function hapusdataHotel(idHotel)
+  {
+    if(confirm("Apakah yakin menghapus data ini?"))
+    {
+      //alert (KodeDaftar);
+      window.open("<?php echo base_url(); ?>Chotel/hapusdataHotel/"+idUser,"_self");  
+    }
+  }
+  
+  function editdataHotel(idHotel)
+  {
+    //alert(KodeDaftar);
+    load("Chotel/editdataHotel/"+idHotel,"#script"); 
+  }
+
+  function simpandataHotel()
+  {
+    // var NamaLengkap=$('#NamaLengkap').val();
+    // if (NamaLengkap=="")
+    // {
+    //   alert ("Nama lengkap masih kosong");
+    //   $('#NamaLengkap').focus();
+    //   return false; 
+    // } 
+    
+    // var Alamat=$('#Alamat').val();
+    // if (Alamat=="")
+    // {
+    //   alert ("Alamat masih kosong");
+    //   $('#Alamat').focus();
+    //   return false; 
+    // }
+    
+    $('#formdaftar').submit();  
+  }
+  
+</script>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>Data Hotel</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?php echo base_url('assets/img/favicon.png'); ?>" rel="icon">
+  <link href="<?php echo base_url('assets/img/apple-touch-icon.png'); ?>" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/bootstrap-icons/bootstrap-icons.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/boxicons/css/boxicons.min.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/quill/quill.snow.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/quill/quill.bubble.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/remixicon/remixicon.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/simple-datatables/style.css'); ?>" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NiceAdmin
@@ -69,20 +107,20 @@
           
         </li><!-- End Notification Nav -->
 
-          ><!-- End Messages Icon -->
+          <!-- End Messages Icon -->
           
         </li><!-- End Messages Nav -->
 
         <li class="nav-item dropdown pe-3">
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">admin Trip2Trip</span>
+            <!-- <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> -->
+            <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $this->session->userdata('email');?></span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Hi, Admin</h6>
-              <span>ADMIN TRIP2TRIP</span>
+              <h6><?php echo $this->session->userdata('namaLengkap');?></h6>
+              <span><?php echo $this->session->userdata('status');?></span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -90,7 +128,7 @@
 
           
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)" onclick="logout();">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -109,41 +147,29 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link collapsed" href="index.html">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
-      
-
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>Form Akun</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="forms-elements.html" >
-              <i class="bi bi-circle"></i><span>Setting Akun Customer</span>
-            </a>
-          </li>
-        </ul>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="forms-elements.html" >
-              <i class="bi bi-circle"></i><span>Setting Akun Hotel</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Forms Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="">
           <i class="bi bi-layout-text-window-reverse"></i><span>Master Data</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <a href="tables-data.html" class="active">
+            <a href="<?php echo base_url('Cadminhotel/tampilHotel'); ?>">
               <i class="bi bi-circle"></i><span>Data Semua Hotel</span>
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo base_url('Cadminhotel/tampilPesanan'); ?>" >
+              <i class="bi bi-circle"></i><span>Data Pemesanan</span>
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo base_url('Chotel/registHotel'); ?>" >
+              <i class="bi bi-circle"></i><span>Input Kamar (belum jadi)</span>
             </a>
           </li>
         </ul>
@@ -157,12 +183,12 @@
   <main id="main" class="main">
 
   <div class="pagetitle">
-      <h1>Master Data AKun</h1>
+      <h1>Master Data Hotel</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">Master Data</li>
-          <li class="breadcrumb-item active">Data Semua Hotel</li>
+          <li class="breadcrumb-item">Data Semua Hotel</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -180,17 +206,45 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th>
-                      <b>ID </b>Hotel
+                    <th>ID Hotel</th>
                     <th>Nama Hotel</th>
-                    <th>Email</th>
-                    <th>Nomor Handphone</th>
-                    <th>Alamat</th>
+                    <th>Lokasi Hotel</th>
+                    <th>Rating</th>
+                    <th>Status Hotel</th>
+                    <th>Foto Hotel</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
-                 
+              <?php
+                if(empty($hasil))
+                {
+                  echo "Data Kosong"; 
+                }
+                else
+                {
+                $no=1;
+                foreach($hasil as $data):
+              ?>
+    
+        <tr>
+        <td><?php echo $data->idHotel;  ?></td>
+        <td><?php echo $data->namaHotel;  ?></td>
+        <td><?php echo $data->lokasiHotel;  ?></td>
+        <td><?php echo $data->rating;  ?></td>
+        <td><?php echo $data->statusHotel;  ?></td>
+        <td><?php echo $data->fotoHotel;  ?></td>
+        <td>
+        <!-- <button type="button" class="btn btn-primary btn-sm" onclick="editdata('<?php echo $data->kode_user; ?>')">Edit</button> -->
+        <button type="button" class="btn btn-danger btn-sm" onclick="hapusdataHotel('<?php echo $data->idHotel; ?>');">Hapus</button>
+        </td>
+      </tr>
+      
+    <?php
+      $no++;
+      endforeach;
+    }
+  ?>  
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
@@ -221,17 +275,24 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/chart.js/chart.umd.js"></script>
-  <script src="assets/vendor/echarts/echarts.min.js"></script>
-  <script src="assets/vendor/quill/quill.min.js"></script>
-  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="<?php echo base_url('assets/vendor/apexcharts/apexcharts.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/chart.js/chart.umd.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/echarts/echarts.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/quill/quill.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/simple-datatables/simple-datatables.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/tinymce/tinymce.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/vendor/php-email-form/validate.js'); ?>"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="<?php echo base_url('assets/js/main.js'); ?>"></script>
+  <script language="javascript">
+    function logout(){
+      if (confirm("Apakah anda yakin untuk keluar?")) {
+        window.open("<?php echo base_url(); ?>Clogin/logout","_self");
+      }
+    }
+  </script>
 
 </body>
 

@@ -129,15 +129,22 @@
               <i class="bi bi-circle"></i><span>Data Pemesanan</span>
             </a>
           </li>
+
           <li>
-            <a href="<?php echo base_url('Cadminhotel/settingHotel'); ?>">
-              <i class="bi bi-circle"></i><span>Data Kamar Hotel</span>
+            <a href="<?php echo base_url('Cadminhotel/tampilHotel'); ?>">
+              <i class="bi bi-circle"></i><span>Data Hotel</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="<?php echo base_url('Chotel/registHotel'); ?>">
+              <i class="bi bi-circle"></i><span>Input Kamar (belum jadi)</span>
             </a>
           </li>
         </ul>
       </li><!-- End Forms Nav -->
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-layout-text-window-reverse"></i><span>Pemesanan</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -147,7 +154,7 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Tables Nav -->
+      </li> --><!-- End Tables Nav -->
  
 
       </ul>
@@ -177,7 +184,7 @@
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card">
 
-                <div class="filter">
+                <!-- <div class="filter">
                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li class="dropdown-header text-start">
@@ -188,7 +195,7 @@
                     <li><a class="dropdown-item" href="#">This Month</a></li>
                     <li><a class="dropdown-item" href="#">This Year</a></li>
                   </ul>
-                </div>
+                </div> -->
 
                 <div class="card-body">
                   <h5 class="card-title">Kamar <span>| Today</span></h5>
@@ -199,7 +206,7 @@
                     </div>
                     <div class="ps-3">
                       <h6>40</h6>
-                      <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Total Kamar Hotel Anda</span>
+                      <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Total Kamar</span>
                     </div>
                   </div>
                 </div>
@@ -211,7 +218,7 @@
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card revenue-card">
 
-                <div class="filter">
+                <!-- <div class="filter">
                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li class="dropdown-header text-start">
@@ -222,10 +229,10 @@
                     <li><a class="dropdown-item" href="#">This Month</a></li>
                     <li><a class="dropdown-item" href="#">This Year</a></li>
                   </ul>
-                </div>
+                </div> -->
 
                 <div class="card-body">
-                  <h5 class="card-title">Kamar Dipesan <span>| This Month</span></h5>
+                  <h5 class="card-title">Kamar Dipesan <span>| Today</span></h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -247,7 +254,7 @@
 
               <div class="card info-card customers-card">
 
-                <div class="filter">
+                <!-- div class="filter">
                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li class="dropdown-header text-start">
@@ -258,10 +265,10 @@
                     <li><a class="dropdown-item" href="#">This Month</a></li>
                     <li><a class="dropdown-item" href="#">This Year</a></li>
                   </ul>
-                </div>
+                </div> -->
 
                 <div class="card-body">
-                  <h5 class="card-title">Kamar Tersedia <span>| Today</span></h5>
+                  <h5 class="card-title">Kamar Ready <span>| Today</span></h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">

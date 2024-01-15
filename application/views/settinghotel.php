@@ -44,7 +44,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Setting Hotel Anda</title>
+  <title>Setting Hotel</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -169,18 +169,12 @@
 
       
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Form Tambah Hotel</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="<?php echo base_url('Cadminhotel/settingHotel'); ?>">
-              <i class="bi bi-circle"></i><span>Setting Hotel Anda</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Forms Nav -->
+        
+      </li> --><!-- End Forms Nav -->
 
        <li class="nav-item">
         <a class="nav-link " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
@@ -193,8 +187,13 @@
             </a>
           </li>
           <li>
-            <a href="tables-data.html">
+            <a href="<?php echo base_url('Chotel/registHotel'); ?>">
               <i class="bi bi-circle"></i><span>Data Kamar Hotel</span>
+            </a>
+          </li>
+          <li>
+            <a href="tables-data.html">
+              <i class="bi bi-circle"></i><span>Input Kamar (belum jadi)</span>
             </a>
           </li>
         </ul>

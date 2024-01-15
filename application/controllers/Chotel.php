@@ -53,19 +53,19 @@
 		
 		function simpandataKamar() 
 		{
-			$this->Mhotel->simpandata();
+			$this->Mhotel->simpandataKamar();
 			redirect('Chotel/registHotel');	
 		}
 		
-		function hapusdata($idUser)
+		function hapusdataKamar($idKamar)
 		{
-			$this->Mhotel->hapusdata($idUser);
+			$this->Mhotel->hapusdataKamar($idKamar);
 			redirect('Chotel/registHotel');
 		}
 		 
-		function editdata($idUser)
+		function editdataKamar($idKamar)
 		{
-			$this->Mhotel->editdata($idUser);
+			$this->Mhotel->editdataKamar($idKamar);
 			// var_dump($idUSer);
 			// die();	 
 		}	

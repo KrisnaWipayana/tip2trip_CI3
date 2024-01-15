@@ -58,7 +58,7 @@
           <table class="table datatable">
             <thead>
               <tr>                
-                <th>Kode Booking</th>
+                <th>ID Transaksi</th>
                 <th>Tanggal Check In</th>
                 <th>Tanggal Check Out</th>
                 <th>Nama Hotel</th>
@@ -68,7 +68,33 @@
               </tr>
             </thead>
             <tbody>
-             
+             <?php 
+                    if(empty($hasil))
+                      {
+                      echo "Data Kosong"; 
+                      }
+                      else
+                      {
+                        $no=1;
+                    foreach ($hasil as $row): 
+                      ?>
+                <tr>
+
+                    <td><?php echo $row->idTransaksi; ?></td>
+                    <td><?php echo $row->tanggalMasuk; ?></td>
+                    <td><?php echo $row->tanggalKeluar; ?></td>
+                    <td>Saint Regis</td>
+                    <td><?php echo $row->namaLengkap; ?></td>
+                    <td><?php echo $row->statusPesanan; ?></td>
+                    <td><?php echo $row->buktiPembayaran; ?></td>
+                    
+                
+                </tr>
+                  <?php 
+                  $no++; 
+                    endforeach;
+                  } 
+                  ?>
             </tbody>
           </table>
           <!-- End Table with stripped rows -->

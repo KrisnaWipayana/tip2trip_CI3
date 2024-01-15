@@ -32,7 +32,7 @@
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link" href="<?php echo base_url('Cawal/tampilawal'); ?>">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="<?php echo base_url('Cbooking/tampilBooking'); ?>">My Booking</a>
-                <a class="nav-item nav-link" href="<?php echo base_url('Cawal/tampilawal'); ?>">Contact</a>
+                <!-- <a class="nav-item nav-link" href="<?php echo base_url('Cawal/tampilawal'); ?>">Contact</a> -->
                 <a class="nav-item nav-link" href="javascript:void(0)" onclick="logout();">Logout</a>
             </div>
             </div>
@@ -49,25 +49,25 @@
               <div class="row">
                   <div class="col-lg">
                   <p>Detail</p>
-                  <h3>Pilihan Hotel Anda</h3>
-                  <p>_______________________</p>
+                  <h3>Hotel Saint Regis</h3>
+                  <p></p>
                   </div>
               </div>
 
               <div class="row">
                   <div class="col-lg">
-                    <div class="card-deck">
+                    <!-- <div class="card-deck"> -->
                       <div class="card">
                       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                <img class="d-block w-100" src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="First slide">
+                                <img class="d-block w-100" src="<?php echo base_url('assets/img/gym.jpg'); ?>" alt="First slide">
                                 </div>
                                 <div class="carousel-item">
-                                <img class="d-block w-100" src="<?php echo base_url('assets/img/bghome.jpeg'); ?>" alt="Second slide">
+                                <img class="d-block w-100" src="<?php echo base_url('assets/img/pool1.jpeg'); ?>" alt="Second slide">
                                 </div>
                                 <div class="carousel-item">
-                                <img class="d-block w-100" src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Third slide">
+                                <img class="d-block w-100" src="<?php echo base_url('assets/img/room2.jpeg'); ?>" alt="Third slide">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -79,45 +79,57 @@
                                 <span class="sr-only">Next</span>
                             </a>
                       </div>
-                      </div>
+                      <!-- </div> -->
                       
                       <div class="card text-left">
                         <div class="card-body">
                           <h5 class="card-title">Nama Hotel</h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                          consequat.</ps>
-                          <p> _______________________________________________________________________</p>
-                          <h5 class="card-tipe">Tipe Kamar</h5>
-                          <p class="tipeKamar">Tipe Kamar :</ps>
-                          <p>_______________________________________________________________________</p>
+                          <p class="card-text">St. Regis dikenal dengan keanggunan dan kemewahan desain interior serta layanannya yang eksklusif. Beberapa ciri khas St. Regis adalah butler pribadi yang siap membantu setiap tamu dan ritual champagne sabering, yang merupakan tradisi di mana sebotol sampanye dibuka dengan menggunakan pisau sabering oleh pelayan.</ps>
+                          
+                          <?php
+                  $pesan=$this->session->flashdata('pesan');
+                  if ($pesan=="")
+                  {
+                    echo "";  
+                  }
+                  else
+                  { 
+                  ?>
+  
+                  <div class="alert alert-success alert-dismissible">
+                  <?php echo $pesan; ?>
+                  </div>
+      
+                  <?php
+                  }
+                  ?>
+
+
+                          <form name="formBooking" action="<?php echo base_url('Cbooking/simpanBooking'); ?>" method="post">
+                          <input type="hidden" name="idTransaksi">
+                          <input type="hidden" name="" value="Saint Regis"> 
                           <h5>Nama Pemesan</h5>
-                          <p><input type="text" class="namaPemesan w-75 rounded" placeholder="Masukkan Nama Lengkap Anda"></p>
-                          <h5>Jumlah Kamar</h5>
-                          <select class="jumlahkamar rounded">
-                            <option value="">...</option>
-                            <optgroup label="ketik dalam jumlah lain">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                          </select>
+                          <p><input type="text" name="namaLengkap" class="form-control" placeholder="Masukkan Nama Lengkap Anda"></p>
+                          
+                          <h5>Tanggal Masuk</h5>
+                          <p><input type="date" name="tanggalMasuk" id="tanggalMasuk" class="form-control" placeholder=""></p>
+                          <h5>Tanggal Keluar</h5>
+                          <p><input type="date" name="tanggalKeluar" id="tanggalKeluar" class="form-control" placeholder=""></p>
                           <h5>Tipe Kamar</h5>
-                          <select class="tipeKamar rounded">
-                            <option value="">...</option>
-                            <optgroup label="Masukkan tipe kamar yang dipilih">
-                                <option value="1">VVIP</option>
-                                <option value="2">Private</option>
-                                <option value="3">HoneyMoon</option>
+                          <select class="form-control">
+                          <?php foreach ($tipeKamar as $tipeKamar): ?>
+                            <option value="<?= $tipeKamar->tipeKamar ?>"><?= $tipeKamar->tipeKamar ?></option>
+                          <?php endforeach; ?>                                                    
                           </select>
-                          <p>_____________________________________________________</p>
-                          <button type="button" class="btnReset btn-danger btn-lg w-30">Reset</button>
-                          <button type="button" class="btnPesan btn-dark btn-lg w-30">Pesan</button>
-                           
+                          <!-- <h5>Jumlah Kamar</h5>                           -->
+                          <!-- <input type="text" class="form-control" name="jumlahKamar" id="jumlahKamar"> -->
+                          <input type="hidden" name="statusPesanan" value="Belum Diverifikasi">
+                          <p></p>                          
+                          <button type="submit" class="btnPesan btn-success btn-lg">Pesan</button>
 
+                  
 
+                          </form>
                         </div>
                     </div>
                   </div>

@@ -64,7 +64,7 @@
 					'idKamar'=>$idKamar
 				);
 				$this->db->where($Kode);
-				$this->db->update('tbKamar',$data);
+				$this->db->update('tb_Kamar',$data);
 				$this->session->set_flashdata('pesan','Data sudah diedit!');
 			}
 		}

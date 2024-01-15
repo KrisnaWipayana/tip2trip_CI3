@@ -158,7 +158,7 @@
 
       
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Form Akun</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -176,15 +176,15 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Forms Nav -->
+      </li> --><!-- End Forms Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-layout-text-window-reverse"></i><span>Master Data</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>Data Semua Hotel</span>
+            <a href="<?php echo base_url('Cadmin/tampilAkun'); ?>">
+              <i class="bi bi-circle"></i><span>Akun Customer</span>
             </a>
           </li>
         </ul>

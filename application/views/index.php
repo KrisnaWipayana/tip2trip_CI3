@@ -10,8 +10,8 @@
 
     <!-- my Font -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="<?php echo base_url('https://fonts.googleapis.com'); ?>">
+    <link rel="preconnect" href="<?php echo base_url('https://fonts.gstatic.com'); ?>" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
      <!-- my Css-->
@@ -31,7 +31,7 @@
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link active" href="<?php echo base_url('Cawal/tampilawal'); ?>">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#about">About</a>
-            <a class="nav-item nav-link" href="#">Contact</a>
+            <!-- <a class="nav-item nav-link" href="#">Contact</a> -->
             <a class="nav-item nav-link" href="<?php echo base_url('Clogin/formlogin'); ?>">Login</a>
             <a class="nav-item nav-link" href="<?php echo base_url('Cdaftar/registacc'); ?>">Sign Up</a>
             <a class="nav-item nav-link" href="javascript:void(0)" onclick="logout();">Log Out</a>
@@ -58,7 +58,7 @@
     <!-- container -->
 
     <!-- Booking Panel -->
-    <div class="container justify-content-center">
+    <!-- <div class="container justify-content-center">
           <div class="col-10 booking-panel">
             <div class="row">
                 <div class="col-lg">
@@ -97,7 +97,7 @@
                 </div>
             </div>
           </div>
-      </div>
+      </div> -->
         <!-- end of booking panel -->
 
     <!-- Rekomendasi Panel -->
@@ -112,10 +112,10 @@
       <div class="container content-center" >
         <div class="col box-1">
           <div class="row">
-          <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
-          <img src="<?php echo base_url('assets/img/sanur.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
-          <p> Sanur </p>
-          <p>Sanur Beach is one of the tourist beaches on the island of Bali. This beach is located just east of the city of Denpasar,Sanur beach cannot be used for surfing. </p>
+          <a href="<?php echo base_url('Cbooking/booking'); ?>">
+          <img src="<?php echo base_url('assets/img/box1.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
+          <p> Hotel Saint Regis </p>
+          <p>St. Regis dikenal dengan keanggunan dan kemewahan desain interior serta layanannya yang eksklusif. </p>
           </a>
           </div>
       </div>
@@ -123,7 +123,7 @@
       <div class="container content-center" >
         <div class="col box-2">
           <div class="row">
-          <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
+          <a href="<?php echo base_url('Cbooking/booking'); ?>">
           <img src="<?php echo base_url('assets/img/kuta3.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <p> Kuta </p>
           <p>Kuta District is a sub-district in Badung Regency, Bali Province, Indonesia. Has tourist attractions in Indonesia that are well known to foreign countries, namely Kuta Beach, especially for surfing fans. </p>
@@ -134,7 +134,7 @@
       <div class="container content-center" >
         <div class="col box-3">
           <div class="row">
-        <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
+        <a href="<?php echo base_url('Cbooking/booking'); ?>">
           <img src="<?php echo base_url('assets/img/nusa penida.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <p>Nusa Penida </p>
           <p>Nusa Penida is an island part of the country of the Republic of Indonesia located in southeastern Bali separated by the Badung Strait. Near this island there are also other small islands namely Nusa Lembongan. </p>
@@ -145,7 +145,7 @@
       <div class="container content-center" >
         <div class="col box-4">
           <div class="row">
-        <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
+        <a href="<?php echo base_url('Cbooking/booking'); ?>">
           <img src="<?php echo base_url('assets/img/ubud.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <p> Ubud </p>
           <p>The city of Ubud, located in the central part of the island of Bali, Indonesia, is known as a center for traditional dance and crafts.</p>
@@ -156,7 +156,7 @@
       <div class="container content-center" >
         <div class="col box-5">
           <div class="row">
-        <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
+        <a href="<?php echo base_url('Cbooking/booking'); ?>">
           <img src="<?php echo base_url('assets/img/kintamani.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <p> Kintamani </p>
           <p>Kintamani is a district in Bangli County, Bali Province, Indonesia. Kintamani is also a natural scenery tourist area in Bali, Indonesia. </p>
@@ -167,7 +167,7 @@
       <div class="container content-center" >
         <div class="col box-6">
           <div class="row">
-        <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>">
+        <a href="<?php echo base_url('Cbooking/booking'); ?>">
           <img src="<?php echo base_url('assets/img/gwk.jpg'); ?>" alt="Responsive image" class="img-fluid" style="width:375px ; height:264px ; border-radius:30px ">
           <p>GWK</p>
           <p>Garuda Wisnu Kencana Cultural Park is the only tourist attraction in Bali that presents Balinese arts performances every hour, every day. </p>
@@ -179,7 +179,7 @@
         <div class="row high-light">
           <div class="col">
           <!-- <button type="button" href="" class="btnSelengkapnya btn-primary btn-lg btn-block">Selengkapnya Disini</button> -->
-          <a href="<?php echo base_url('Clengkap/tampilLengkap'); ?>" class="btnSelengkapnya btn-primary btn-lg btn-block">Selengkapnya Disini</a>
+          <center><a href="<?php echo base_url('Cbooking/booking'); ?>" class="btnSelengkapnya btn-primary btn-lg btn-block">Selengkapnya Disini</a></center>
           </div>
       </div>
     <!-- end off rekomendasi panel -->
@@ -270,11 +270,11 @@
 
     <!-- footer -->
 
-    <div class="card text-center footer">
+    <!-- <div class="card text-center footer">
       <div class="card-footer text-muted" style="margin">
       <h4>Design By TRIP2TRIP TEAM</h4>
       </div>
-    </div>
+    </div> -->
     
     <!-- end of footer -->
         
